@@ -85,7 +85,7 @@
     "dist"
   ],
   "husky": {
-    "pre-commit": "yarn lint"
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.json": "prettier --write",
