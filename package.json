@@ -1,0 +1,97 @@
+{
+  "name": "@malept/cross-spawn-promise",
+  "version": "1.0.0",
+  "description": "Promisified version of cross-spawn",
+  "main": "dist/src/index.js",
+  "repository": "https://github.com/malept/cross-spawn-promise",
+  "author": "Mark Lee",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "ava": "ava",
+    "build": "tsc",
+    "codecov": "nyc report --reporter=text-lcov | codecov --disable=gcov --pipe --env=CI_OS",
+    "coverage": "nyc ava",
+    "docs": "typedoc",
+    "lint": "eslint --ext .ts .",
+    "prepare": "yarn build",
+    "test": "yarn lint && yarn ava"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "cross-spawn": "^7.0.1"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/cross-spawn": "^6.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "ava": "^3.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-ava": "^10.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.16.9",
+    "typescript": "^3.7.5"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "2018",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:ava/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript",
+      "plugin:prettier/recommended",
+      "plugin:promise/recommended",
+      "prettier",
+      "prettier/@typescript-eslint"
+    ],
+    "rules": {
+      "strict": "error"
+    }
+  },
+  "eslintIgnore": [
+    "dist"
+  ],
+  "husky": {
+    "pre-commit": "yarn lint"
+  },
+  "lint-staged": {
+    "*.json": "prettier --write",
+    "*.ts": "prettier-eslint --write"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+  }
+}
