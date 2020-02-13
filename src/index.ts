@@ -25,9 +25,27 @@ export type CrossSpawnOptions = SpawnOptions & {
 
 function stringifyCommand(cmd: string, args?: ReadonlyArray<string>): string {
   if (args) {
-    return `${cmd} ${args.join(" ")}`;
+    return `${cmd} ${args.join(" ")}`.trim();
   } else {
     return cmd;
+  }
+}
+
+export class CrossSpawnError extends Error {
+  public originalError: Error;
+
+  constructor(
+    cmd: string,
+    args: CrossSpawnArgs,
+    originalError: Error,
+    stderr: string
+  ) {
+    const fullCommand = stringifyCommand(cmd, args);
+    const errorMessage = originalError.message || originalError;
+    super(
+      `Error executing command (${fullCommand}):\n${errorMessage}\n${stderr}`.trim()
+    );
+    this.originalError = originalError;
   }
 }
 
@@ -100,14 +118,7 @@ export async function spawn(
       if (updateErrorCallback) {
         updateErrorCallback(err, !!logger);
       }
-      reject(
-        new Error(
-          `Error executing command (${err.message || err}):\n${stringifyCommand(
-            cmd,
-            args
-          )}\n${stderr}`.trim()
-        )
-      );
+      reject(new CrossSpawnError(cmd, args, err, stderr));
     });
   });
 }
