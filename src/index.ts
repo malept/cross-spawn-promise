@@ -24,8 +24,8 @@ export type CrossSpawnOptions = SpawnOptions & {
 };
 
 function stringifyCommand(cmd: string, args?: ReadonlyArray<string>): string {
-  if (args) {
-    return `${cmd} ${args.join(" ")}`.trim();
+  if (args && Array.isArray(args) && args.length > 0) {
+    return `${cmd} ${args.join(" ")}`;
   } else {
     return cmd;
   }
