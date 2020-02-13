@@ -2,6 +2,10 @@
 
 > A promisified version of `cross-spawn` with slightly different behavior & extra options.
 
+[![CI](https://github.com/malept/cross-spawn-promise/workflows/CI/badge.svg)](https://github.com/malept/cross-spawn-promise/actions?query=workflow%3ACI)
+[![NPM package](https://img.shields.io/npm/v/@malept/cross-spawn-promise.svg)](https://www.npmjs.com/package/@malept/cross-spawn-promise)
+[![codecov](https://codecov.io/gh/malept/cross-spawn-promise/branch/master/graph/badge.svg)](https://codecov.io/gh/malept/cross-spawn-promise)
+
 ## Different Behavior
 
 If the spawned process exits with a non-zero code, an `ExitCodeError` is thrown with the original
