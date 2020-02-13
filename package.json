@@ -16,7 +16,7 @@
     "coverage": "nyc ava",
     "docs": "typedoc",
     "lint": "eslint --ext .ts .",
-    "prepare": "yarn build",
+    "prepare": "npm run build",
     "test": "yarn lint && yarn ava"
   },
   "files": [
