@@ -43,6 +43,6 @@ test("updateErrorCallback removes the message from the error", async t => {
         delete err.message;
       }
     }),
-    { message: "Error executing command (does-not-exist):\nError" }
+    { message: /^Error executing command \(does-not-exist\):\nError/ }
   );
 });
