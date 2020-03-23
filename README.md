@@ -11,6 +11,9 @@
 If the spawned process exits with a non-zero code, an `ExitCodeError` is thrown with the original
 command, code, `stdout`, and `stderr` as properties.
 
+If the spawned process is terminated by a signal on non-Windows platforms, an `ExitSignalError` is
+thrown with the original command, signal name, `stdout`, and `stderr` as properties.
+
 ## Extra Options
 
 * `logger`: a `Function` such as `console.log` or `debug(name)` to log some information

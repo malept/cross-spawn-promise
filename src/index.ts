@@ -49,12 +49,29 @@ export class CrossSpawnError extends Error {
   }
 }
 
-export class ExitCodeError extends Error {
+export class ExitError extends Error {
   public cmd: string;
   public args: CrossSpawnArgs;
-  public code: number;
   public stdout: string;
   public stderr: string;
+
+  constructor(
+    cmd: string,
+    args: CrossSpawnArgs,
+    message: string,
+    stdout: string,
+    stderr: string
+  ) {
+    super(message);
+    this.cmd = cmd;
+    this.args = args;
+    this.stdout = stdout;
+    this.stderr = stderr;
+  }
+}
+
+export class ExitCodeError extends ExitError {
+  public code: number;
 
   constructor(
     cmd: string,
@@ -65,13 +82,35 @@ export class ExitCodeError extends Error {
   ) {
     const fullCommand = stringifyCommand(cmd, args);
     super(
-      `Command failed with a non-zero return code (${code}):\n${fullCommand}\n${stdout}\n${stderr}`.trim()
+      cmd,
+      args,
+      `Command failed with a non-zero return code (${code}):\n${fullCommand}\n${stdout}\n${stderr}`.trim(),
+      stdout,
+      stderr
     );
-    this.cmd = cmd;
-    this.args = args;
     this.code = code;
-    this.stdout = stdout;
-    this.stderr = stderr;
+  }
+}
+
+export class ExitSignalError extends ExitError {
+  public signal: string;
+
+  constructor(
+    cmd: string,
+    args: CrossSpawnArgs,
+    signal: string,
+    stdout: string,
+    stderr: string
+  ) {
+    const fullCommand = stringifyCommand(cmd, args);
+    super(
+      cmd,
+      args,
+      `Command terminated via a signal (${signal}):\n${fullCommand}\n${stdout}\n${stderr}`.trim(),
+      stdout,
+      stderr
+    );
+    this.signal = signal;
   }
 }
 
@@ -107,9 +146,11 @@ export async function spawn(
         }
       );
     }
-    process.on("close", (code) => {
+    process.on("close", (code, signal) => {
       if (code === 0) {
         resolve(stdout);
+      } else if (code === null) {
+        reject(new ExitSignalError(cmd, args, signal, stdout, stderr));
       } else {
         reject(new ExitCodeError(cmd, args, code, stdout, stderr));
       }
