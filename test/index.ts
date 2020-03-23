@@ -26,19 +26,21 @@ test("throws an error when it cannot find an executable", async (t) => {
   t.is(originalError.syscall, "spawn does-not-exist");
 });
 
-test("throws an error when the spawned process is terminated via a signal", async (t) => {
-  const error = (await t.throwsAsync(
-    spawn(path.resolve(__dirname, "..", "node_modules", ".bin", "ts-node"), [
-      path.resolve(__dirname, "fixtures", "killed-by-signal.ts"),
-    ]),
-    {
-      instanceOf: ExitSignalError,
-      message: /^Command terminated via a signal/,
-    }
-  )) as ExitSignalError;
+if (process.platform !== "win32") {
+  test("throws an error when the spawned process is terminated via a signal", async (t) => {
+    const error = (await t.throwsAsync(
+      spawn(path.resolve(__dirname, "..", "node_modules", ".bin", "ts-node"), [
+        path.resolve(__dirname, "fixtures", "killed-by-signal.ts"),
+      ]),
+      {
+        instanceOf: ExitSignalError,
+        message: /^Command terminated via a signal/,
+      }
+    )) as ExitSignalError;
 
-  t.is(error.signal, "SIGKILL");
-});
+    t.is(error.signal, "SIGKILL");
+  });
+}
 
 test("updateErrorCallback modifies the exception", async (t) => {
   await t.throwsAsync(
