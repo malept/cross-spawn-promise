@@ -95,26 +95,26 @@ export async function spawn(
     let stderr = "";
     const process = crossSpawn(cmd, args, spawnOptions);
     if (process.stdout) {
-      process.stdout.on("data", data => {
+      process.stdout.on("data", (data) => {
         stdout += data.toString();
       });
     }
     if (process.stderr) {
       process.stderr.on(
         "data",
-        /* istanbul ignore next */ data => {
+        /* istanbul ignore next */ (data) => {
           stderr += data.toString();
         }
       );
     }
-    process.on("close", code => {
+    process.on("close", (code) => {
       if (code === 0) {
         resolve(stdout);
       } else {
         reject(new ExitCodeError(cmd, args, code, stdout, stderr));
       }
     });
-    process.on("error", err => {
+    process.on("error", (err) => {
       if (updateErrorCallback) {
         updateErrorCallback(err, !!logger);
       }
