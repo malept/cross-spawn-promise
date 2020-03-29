@@ -16,9 +16,9 @@ thrown with the original command, signal name, `stdout`, and `stderr` as propert
 
 ## Extra Options
 
-* `logger`: a `Function` such as `console.log` or `debug(name)` to log some information
+- `logger`: a `Function` such as `console.log` or `debug(name)` to log some information
   about the spawned process.
-* `updateErrorCallback`: a callback which mutates the error before it is re-thrown. Most commonly,
+- `updateErrorCallback`: a callback which mutates the error before it is re-thrown. Most commonly,
   this is used to augment the error message of `ENOENT` error to provide a more human-friendly
   message as to how to install the missing executable.
 

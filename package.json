@@ -15,7 +15,7 @@
     "codecov": "nyc report --reporter=text-lcov | codecov --disable=gcov --pipe --env=CI_OS",
     "coverage": "nyc ava",
     "docs": "typedoc",
-    "lint": "eslint --ext .ts .",
+    "lint": "prettier --check . && eslint --ext .ts .",
     "prepare": "npm run build",
     "test": "yarn lint && yarn ava"
   },
@@ -42,7 +42,6 @@
     "lint-staged": "^10.0.7",
     "nyc": "^15.0.0",
     "prettier": "^2.0.1",
-    "prettier-eslint-cli": "^5.0.0",
     "source-map-support": "^0.5.16",
     "ts-node": "^8.6.2",
     "typedoc": "^0.17.3",
@@ -92,8 +91,11 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.json": "prettier --write",
-    "*.ts": "prettier-eslint --write"
+    "*.{json,md,yml}": "prettier --write",
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript"

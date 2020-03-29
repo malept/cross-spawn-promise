@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/malept/cross-spawn-promise/compare/v1.0.0...master
+[unreleased]: https://github.com/malept/cross-spawn-promise/compare/v1.0.0...master
 
 ## [1.0.0] - 2020-02-13
 

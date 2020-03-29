@@ -12,7 +12,6 @@ sorts of contributions. They include, but are not limited to:
 We strongly suggest that before filing an issue, you search through the existing issues to see
 if it has already been filed by someone else.
 
-
 ## Contribution Suggestions
 
 We use the label [`help wanted`](https://github.com/malept/cross-spawn-promise/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) in the issue tracker to denote fairly-well-scoped-out bugs or feature requests that the community can pick up and work on. If any of those labeled issues do not have enough information, please feel free to ask constructive questions. (This applies to any open issue.)
@@ -21,24 +20,24 @@ We use the label [`help wanted`](https://github.com/malept/cross-spawn-promise/i
 
 Here are some things to keep in mind as you file pull requests to fix bugs, add new features, etc.:
 
-* GitHub Actions are used to make sure that the project builds packages as expected on the
+- GitHub Actions are used to make sure that the project builds packages as expected on the
   supported platforms, using supported Node.js versions.
-* Unless it's impractical, please write tests for your changes. This will help us so that we can
+- Unless it's impractical, please write tests for your changes. This will help us so that we can
   spot regressions much easier.
-* If your PR changes the behavior of an existing feature, or adds a new feature, please add/edit
+- If your PR changes the behavior of an existing feature, or adds a new feature, please add/edit
   the package's documentation. This will likely include doc comments and `README.md`.
-* Commit messages should follow the [conventional commits standard](https://www.conventionalcommits.org/en/v1.0.0/).
-* This project uses [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) for code
+- Commit messages should follow the [conventional commits standard](https://www.conventionalcommits.org/en/v1.0.0/).
+- This project uses [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) for code
   formatting/conventions. CI will fail if the PR does not conform to this standard.
-* One of the philosophies of the project is to keep the code base as small as possible. If you are
+- One of the philosophies of the project is to keep the code base as small as possible. If you are
   adding a new feature, think about whether it is appropriate to go into a separate Node module,
   and then be integrated into this project.
-* If you are contributing a nontrivial change, please add an entry to `NEWS.md`. The format is
+- If you are contributing a nontrivial change, please add an entry to `NEWS.md`. The format is
   similar to the one described at [Keep a Changelog](http://keepachangelog.com/).
-* Please **do not** bump the version number in your pull requests, the maintainers will do that.
+- Please **do not** bump the version number in your pull requests, the maintainers will do that.
   Feel free to indicate whether the changes require a major, minor, or patch version bump, as
   prescribed by the [semantic versioning specification](http://semver.org/).
-* Once your pull request is approved, please make sure your commits are rebased onto the latest
+- Once your pull request is approved, please make sure your commits are rebased onto the latest
   commit in the master branch, and that you limit/squash the number of commits created to a
   "feature"-level. For instance:
 
