@@ -1,6 +1,6 @@
 {
   "name": "@malept/cross-spawn-promise",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Promisified version of cross-spawn",
   "main": "dist/src/index.js",
   "repository": "https://github.com/malept/cross-spawn-promise",
