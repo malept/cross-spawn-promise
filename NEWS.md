@@ -10,7 +10,7 @@
 
 ### Added
 
-* throw a separate error when a process terminates via a signal (#1)
+- throw a separate error when a process terminates via a signal (#1)
 
 ## [1.0.0] - 2020-02-13
 
