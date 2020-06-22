@@ -39,9 +39,11 @@ jobs:
         run: yarn lint
       - name: Test
         run: yarn coverage
-      - name: Codecov
-        run: yarn codecov
+      - name: Upload code coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage/lcov.info
+          env_vars: CI_OS,NODE_VERSION
         env:
           CI_OS: ${{ matrix.os }}
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
           NODE_VERSION: ${{ matrix.node-version }}
