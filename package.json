@@ -12,8 +12,7 @@
   "scripts": {
     "ava": "ava",
     "build": "tsc",
-    "codecov": "nyc report --reporter=text-lcov | codecov --disable=gcov --pipe --env=CI_OS",
-    "coverage": "nyc ava",
+    "coverage": "nyc --reporter=lcov --reporter=text ava",
     "docs": "typedoc",
     "lint": "prettier --check . && eslint --ext .ts .",
     "prepare": "npm run build",
@@ -31,7 +30,6 @@
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
     "ava": "^3.3.0",
-    "codecov": "^3.6.5",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-ava": "^10.0.1",
