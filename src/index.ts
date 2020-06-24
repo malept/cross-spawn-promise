@@ -49,7 +49,7 @@ export class CrossSpawnError extends Error {
   }
 }
 
-export class ExitError extends Error {
+export abstract class ExitError extends Error {
   public cmd: string;
   public args: CrossSpawnArgs;
   public stdout: string;
