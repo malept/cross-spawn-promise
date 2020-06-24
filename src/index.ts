@@ -3,6 +3,9 @@ import { SpawnOptions } from "child_process";
 
 export type LoggerFunction = (message: string) => void;
 
+/**
+ * List of string arguments.
+ */
 export type CrossSpawnArgs = ReadonlyArray<string> | undefined;
 
 export type CrossSpawnOptions = SpawnOptions & {
@@ -31,6 +34,9 @@ function stringifyCommand(cmd: string, args?: ReadonlyArray<string>): string {
   }
 }
 
+/**
+ * Wrapper error for when the spawn function itself emits an error.
+ */
 export class CrossSpawnError extends Error {
   public originalError: Error;
 
@@ -49,6 +55,9 @@ export class CrossSpawnError extends Error {
   }
 }
 
+/**
+ * Base error class for when a process does not exit with a status code of zero.
+ */
 export abstract class ExitError extends Error {
   public cmd: string;
   public args: CrossSpawnArgs;
@@ -70,6 +79,9 @@ export abstract class ExitError extends Error {
   }
 }
 
+/**
+ * The error thrown when a process emits a non-zero exit code.
+ */
 export class ExitCodeError extends ExitError {
   public code: number;
 
@@ -92,6 +104,9 @@ export class ExitCodeError extends ExitError {
   }
 }
 
+/**
+ * The error thrown when a process exits via a signal.
+ */
 export class ExitSignalError extends ExitError {
   public signal: string;
 
@@ -117,6 +132,8 @@ export class ExitSignalError extends ExitError {
 /**
  * A wrapper around `cross-spawn`'s `spawn` function which can optionally log the command executed
  * and/or change the error object via a callback.
+ *
+ * @param cmd The command to run
  */
 export async function spawn(
   cmd: string,
