@@ -20,8 +20,8 @@ export type CrossSpawnOptions = SpawnOptions & {
    * augment the error message of `ENOENT` errors to provide a more human-friendly message as to
    * how to install the missing executable.
    *
-   * @param error the error thrown from the `spawn` function
-   * @param hasLogger whether `logger` was set
+   * @param error - The error thrown from the `spawn` function
+   * @param hasLogger - Whether `logger` was set
    */
   updateErrorCallback?: (error: Error, hasLogger: boolean) => void;
 };
@@ -133,7 +133,7 @@ export class ExitSignalError extends ExitError {
  * A wrapper around `cross-spawn`'s `spawn` function which can optionally log the command executed
  * and/or change the error object via a callback.
  *
- * @param cmd The command to run
+ * @param cmd - The command to run
  */
 export async function spawn(
   cmd: string,
