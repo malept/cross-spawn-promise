@@ -53,10 +53,14 @@ test("updateErrorCallback modifies the exception", async (t) => {
   );
 });
 
+type ErrorWithOptionalMessage = {
+  message?: string;
+};
+
 test("updateErrorCallback removes the message from the error", async (t) => {
   await t.throwsAsync(
     spawn("does-not-exist", [], {
-      updateErrorCallback: (err) => {
+      updateErrorCallback: (err: ErrorWithOptionalMessage) => {
         delete err.message;
       },
     }),
