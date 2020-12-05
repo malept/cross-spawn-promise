@@ -84,9 +84,16 @@
   "eslintIgnore": [
     "dist"
   ],
-  "funding": {
-    "url": "https://github.com/malept/cross-spawn-promise?sponsor=1"
-  },
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://github.com/sponsors/malept"
+    },
+    {
+      "type": "tidelift",
+      "url": "https://tidelift.com/subscription/pkg/npm-.malept-cross-spawn-promise?utm_medium=referral&utm_source=npm_fund"
+    }
+  ],
   "husky": {
     "pre-commit": "lint-staged"
   },
