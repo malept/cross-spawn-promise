@@ -22,7 +22,7 @@ jobs:
       - uses: docker://malept/gha-gh-pages:1.3.0
         with:
           docsPath: docs
-          gitCommitMessage: 'Publish [skip ci]'
+          gitCommitMessage: "Publish [skip ci]"
           showUnderscoreFiles: true
           versionDocs: true
         env:
