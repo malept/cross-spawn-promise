@@ -167,7 +167,9 @@ export async function spawn(
       if (code === 0) {
         resolve(stdout);
       } else if (code === null) {
-        reject(new ExitSignalError(cmd, args, signal, stdout, stderr));
+        // Why: assume signal is not null if code is null
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        reject(new ExitSignalError(cmd, args, signal!, stdout, stderr));
       } else {
         reject(new ExitCodeError(cmd, args, code, stdout, stderr));
       }
