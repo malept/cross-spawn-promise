@@ -73,8 +73,7 @@
       "plugin:import/typescript",
       "plugin:prettier/recommended",
       "plugin:promise/recommended",
-      "prettier",
-      "prettier/@typescript-eslint"
+      "prettier"
     ],
     "rules": {
       "strict": "error",
