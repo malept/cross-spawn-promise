@@ -16,7 +16,10 @@
     "docs": "typedoc src/index.ts",
     "lint": "prettier --check . && eslint --ext .ts .",
     "prepare": "npm run build",
-    "test": "yarn lint && yarn ava"
+    "test": "yarn lint && yarn ava",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "files": [
     "dist"
@@ -37,9 +40,10 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-tsdoc": "^0.2.5",
-    "husky": "^4.2.1",
+    "husky": "^5.1.1",
     "lint-staged": "^10.0.7",
     "nyc": "^15.0.0",
+    "pinst": "^2.1.6",
     "prettier": "^2.0.1",
     "source-map-support": "^0.5.16",
     "ts-node": "^9.0.0",
@@ -93,9 +97,6 @@
       "url": "https://tidelift.com/subscription/pkg/npm-.malept-cross-spawn-promise?utm_medium=referral&utm_source=npm_fund"
     }
   ],
-  "husky": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "*.{json,md,yml}": "prettier --write",
     "*.ts": [
