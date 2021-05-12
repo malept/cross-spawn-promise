@@ -38,7 +38,7 @@ Here are some things to keep in mind as you file pull requests to fix bugs, add 
   Feel free to indicate whether the changes require a major, minor, or patch version bump, as
   prescribed by the [semantic versioning specification](http://semver.org/).
 - Once your pull request is approved, please make sure your commits are rebased onto the latest
-  commit in the master branch, and that you limit/squash the number of commits created to a
+  commit in the main branch, and that you limit/squash the number of commits created to a
   "feature"-level. For instance:
 
 bad:
