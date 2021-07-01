@@ -40,7 +40,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-tsdoc": "^0.2.5",
-    "husky": "^6.0.0",
+    "husky": "^7.0.0",
     "lint-staged": "^10.0.7",
     "nyc": "^15.0.0",
     "pinst": "^2.1.6",
