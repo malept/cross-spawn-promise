@@ -15,11 +15,8 @@
     "coverage": "nyc --reporter=lcov --reporter=text ava",
     "docs": "typedoc src/index.ts",
     "lint": "prettier --check . && eslint --ext .ts .",
-    "prepare": "npm run build",
-    "test": "yarn lint && yarn ava",
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "prepare": "husky install && yarn build",
+    "test": "yarn lint && yarn ava"
   },
   "files": [
     "dist"
@@ -41,10 +38,9 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-tsdoc": "^0.2.5",
-    "husky": "^6.0.0",
+    "husky": "^7.0.0",
     "lint-staged": "^11.0.0",
     "nyc": "^15.0.0",
-    "pinst": "^2.1.6",
     "prettier": "^2.0.1",
     "source-map-support": "^0.5.16",
     "ts-node": "^10.0.0",
