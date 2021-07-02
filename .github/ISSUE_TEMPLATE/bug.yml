@@ -1,0 +1,59 @@
+name: Bug report 🐞
+description: Create a report to help us improve @malept/cross-spawn-promise
+labels: "bug :bug:"
+
+body:
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-flight checklist
+      options:
+        - label: I have read the [contribution documentation](https://github.com/malept/cross-spawn-promise/blob/master/CONTRIBUTING.md) for this project.
+          required: true
+        - label: I have searched the issue tracker for a bug that matches the one I want to file, without success.
+          required: true
+  - type: input
+    id: module-version
+    attributes:
+      label: "`@malept/cross-spawn-promise` version"
+      description: The output of `npm list @malept/cross-spawn-promise`, e.g., 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system
+      description: Platform and version, for example, macOS 10.13.6 / Windows 10 (1803) / Ubuntu 18.04 x64
+    validations:
+      required: true
+  - type: input
+    id: module-version
+    attributes:
+      label: Last known working `@malept/cross-spawn-promise` version
+      description: e.g., 1.0.0
+  - type: textbox
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textbox
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: A clear and concise description of what actually happened.
+    validations:
+      required: true
+  - type: textbox
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Your best chance of getting this bug looked at quickly is to provide a **minimal** code snippet that can be run and clearly shows the actual behavior described above.
+    validations:
+      required: true
+  - type: textbox
+    id: additional-information
+    attributes:
+      label: Additional information
+      description: Please add any other context about the problem.
