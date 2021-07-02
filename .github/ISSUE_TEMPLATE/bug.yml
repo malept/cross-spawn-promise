@@ -31,28 +31,28 @@ body:
     attributes:
       label: Last known working `@malept/cross-spawn-promise` version
       description: e.g., 1.0.0
-  - type: textbox
+  - type: textarea
     id: expected-behavior
     attributes:
       label: Expected behavior
       description: A clear and concise description of what you expected to happen.
     validations:
       required: true
-  - type: textbox
+  - type: textarea
     id: actual-behavior
     attributes:
       label: Actual behavior
       description: A clear and concise description of what actually happened.
     validations:
       required: true
-  - type: textbox
+  - type: textarea
     id: steps-to-reproduce
     attributes:
       label: Steps to reproduce
       description: Your best chance of getting this bug looked at quickly is to provide a **minimal** code snippet that can be run and clearly shows the actual behavior described above.
     validations:
       required: true
-  - type: textbox
+  - type: textarea
     id: additional-information
     attributes:
       label: Additional information

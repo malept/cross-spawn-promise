@@ -12,28 +12,28 @@ body:
           required: true
         - label: I have searched the issue tracker for a feature request that matches the one I want to file, without success.
           required: true
-  - type: textbox
+  - type: textarea
     id: problem-description
     attributes:
       label: Problem description
       description: Is your feature request related to a problem? Please add a clear and concise description of what the problem is.
     validations:
       required: true
-  - type: textbox
+  - type: textarea
     id: proposed-solution
     attributes:
       label: Proposed solution
       description: Describe the solution you'd like in a clear and concise manner.
     validations:
       required: true
-  - type: textbox
+  - type: textarea
     id: alternatives-considered
     attributes:
       label: Alternatives considered
       description: A clear and concise description of any alternative solutions or features you've considered.
     validations:
       required: true
-  - type: textbox
+  - type: textarea
     id: additional-information
     attributes:
       label: Additional information
