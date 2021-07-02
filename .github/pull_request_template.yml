@@ -1,0 +1,17 @@
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of change
+      description: Describe what changes you've made and potential side effects for users.
+      placeholder: pull request description
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-flight checklist
+      options:
+        - label: I have read the [contribution documentation](https://github.com/malept/cross-spawn-promise/blob/main/CONTRIBUTING.md) for this project.
+          required: true
+        - label: The changes are appropriately documented (if applicable).
+        - label: The changes have sufficient test coverage (if applicable).
+        - label: The testsuite passes successfully on my local machine (if applicable).
