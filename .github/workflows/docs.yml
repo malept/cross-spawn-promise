@@ -21,6 +21,7 @@ jobs:
       - run: yarn docs
       - uses: docker://malept/gha-gh-pages:1.3.0
         with:
+          defaultBranch: main
           docsPath: docs
           gitCommitMessage: "Publish [skip ci]"
           showUnderscoreFiles: true
