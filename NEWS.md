@@ -2,7 +2,27 @@
 
 ## [Unreleased]
 
-[unreleased]: https://github.com/malept/cross-spawn-promise/compare/v1.1.0...main
+[unreleased]: https://github.com/malept/cross-spawn-promise/compare/v2.0.0...main
+
+## [2.0.0] - 2021-07-02
+
+[2.0.0]: https://github.com/malept/cross-spawn-promise/compare/v1.1.1...v2.0.0
+
+### Changed
+
+- Officially support Node.js >= 12.13.0 (#40)
+
+### Removed
+
+- Drop official support for Node.js &lt; 12.13.0 (#40)
+
+## [1.1.1] - 2020-12-04
+
+[1.1.1]: https://github.com/malept/cross-spawn-promise/compare/v1.1.0...v1.1.1
+
+### Build
+
+- Publish versioned API docs
 
 ## [1.1.0] - 2020-03-28
 
