@@ -7,7 +7,7 @@
   "author": "Mark Lee",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">= 10"
+    "node": ">= 12.13.0"
   },
   "scripts": {
     "ava": "ava",
