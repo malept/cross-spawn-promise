@@ -27,7 +27,7 @@ body:
     validations:
       required: true
   - type: input
-    id: module-version
+    id: last-working-version
     attributes:
       label: Last known working `@malept/cross-spawn-promise` version
       description: e.g., 1.0.0
