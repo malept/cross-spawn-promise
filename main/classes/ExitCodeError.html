@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CrossSpawnError | @malept/cross-spawn-promise</title>
+	<title>ExitCodeError | @malept/cross-spawn-promise</title>
 	<meta name="description" content="Documentation for @malept/cross-spawn-promise">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@malept/cross-spawn-promise</a>
 				</li>
 				<li>
-					<a href="crossspawnerror.html">CrossSpawnError</a>
+					<a href="ExitCodeError.html">ExitCodeError</a>
 				</li>
 			</ul>
-			<h1>Class CrossSpawnError</h1>
+			<h1>Class ExitCodeError</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Wrapper error for when the spawn function itself emits an error.</p>
+						<p>The error thrown when a process emits a non-zero exit code.</p>
 					</div>
 				</div>
 			</section>
@@ -76,10 +76,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">Error</span>
+						<a href="ExitError.html" class="tsd-signature-type" data-tsd-kind="Class">ExitError</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">CrossSpawnError</span>
+								<span class="target">ExitCodeError</span>
 							</li>
 						</ul>
 					</li>
@@ -92,24 +92,28 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="crossspawnerror.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="ExitCodeError.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="crossspawnerror.html#message" class="tsd-kind-icon">message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="crossspawnerror.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="crossspawnerror.html#originalerror" class="tsd-kind-icon">original<wbr>Error</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="crossspawnerror.html#stack" class="tsd-kind-icon">stack</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="crossspawnerror.html#preparestacktrace" class="tsd-kind-icon">prepare<wbr>Stack<wbr>Trace</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="crossspawnerror.html#stacktracelimit" class="tsd-kind-icon">stack<wbr>Trace<wbr>Limit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="ExitCodeError.html#args" class="tsd-kind-icon">args</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="ExitCodeError.html#cmd" class="tsd-kind-icon">cmd</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="ExitCodeError.html#code" class="tsd-kind-icon">code</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExitCodeError.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExitCodeError.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExitCodeError.html#stack" class="tsd-kind-icon">stack</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="ExitCodeError.html#stderr" class="tsd-kind-icon">stderr</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="ExitCodeError.html#stdout" class="tsd-kind-icon">stdout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="ExitCodeError.html#prepareStackTrace" class="tsd-kind-icon">prepare<wbr>Stack<wbr>Trace</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="ExitCodeError.html#stackTraceLimit" class="tsd-kind-icon">stack<wbr>Trace<wbr>Limit</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="crossspawnerror.html#capturestacktrace" class="tsd-kind-icon">capture<wbr>Stack<wbr>Trace</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="ExitCodeError.html#captureStackTrace" class="tsd-kind-icon">capture<wbr>Stack<wbr>Trace</a></li>
 							</ul>
 						</section>
 					</div>
@@ -121,14 +125,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Cross<wbr>Spawn<wbr>Error<span class="tsd-signature-symbol">(</span>cmd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../modules.html#crossspawnargs" class="tsd-signature-type" data-tsd-kind="Type alias">CrossSpawnArgs</a>, originalError<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span>, stderr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="crossspawnerror.html" class="tsd-signature-type" data-tsd-kind="Class">CrossSpawnError</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Exit<wbr>Code<wbr>Error<span class="tsd-signature-symbol">(</span>cmd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../modules.html#CrossSpawnArgs" class="tsd-signature-type" data-tsd-kind="Type alias">CrossSpawnArgs</a>, code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, stdout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, stderr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExitCodeError.html" class="tsd-signature-type" data-tsd-kind="Class">ExitCodeError</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides Error.constructor</p>
+								<p>Overrides <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-promise/blob/053ccf2/src/index.ts#L41">src/index.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-promise/blob/f6b7f53/src/index.ts#L88">src/index.ts:88</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -137,28 +141,63 @@
 									<h5>cmd: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>args: <a href="../modules.html#crossspawnargs" class="tsd-signature-type" data-tsd-kind="Type alias">CrossSpawnArgs</a></h5>
+									<h5>args: <a href="../modules.html#CrossSpawnArgs" class="tsd-signature-type" data-tsd-kind="Type alias">CrossSpawnArgs</a></h5>
 								</li>
 								<li>
-									<h5>originalError: <span class="tsd-signature-type">Error</span></h5>
+									<h5>code: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>stdout: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>stderr: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="crossspawnerror.html" class="tsd-signature-type" data-tsd-kind="Class">CrossSpawnError</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="ExitCodeError.html" class="tsd-signature-type" data-tsd-kind="Class">ExitCodeError</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="args" class="tsd-anchor"></a>
+					<h3>args</h3>
+					<div class="tsd-signature tsd-kind-icon">args<span class="tsd-signature-symbol">:</span> <a href="../modules.html#CrossSpawnArgs" class="tsd-signature-type" data-tsd-kind="Type alias">CrossSpawnArgs</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#args">args</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-promise/blob/f6b7f53/src/index.ts#L63">src/index.ts:63</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="cmd" class="tsd-anchor"></a>
+					<h3>cmd</h3>
+					<div class="tsd-signature tsd-kind-icon">cmd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#cmd">cmd</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-promise/blob/f6b7f53/src/index.ts#L62">src/index.ts:62</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="code" class="tsd-anchor"></a>
+					<h3>code</h3>
+					<div class="tsd-signature tsd-kind-icon">code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-promise/blob/f6b7f53/src/index.ts#L86">src/index.ts:86</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="message" class="tsd-anchor"></a>
 					<h3>message</h3>
 					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Error.message</p>
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#message">message</a></p>
 						<ul>
 							<li>Defined in node_modules/typescript/lib/lib.es5.d.ts:974</li>
 						</ul>
@@ -169,19 +208,9 @@
 					<h3>name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Error.name</p>
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#name">name</a></p>
 						<ul>
 							<li>Defined in node_modules/typescript/lib/lib.es5.d.ts:973</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="originalerror" class="tsd-anchor"></a>
-					<h3>original<wbr>Error</h3>
-					<div class="tsd-signature tsd-kind-icon">original<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Error</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/malept/cross-spawn-promise/blob/053ccf2/src/index.ts#L41">src/index.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -190,18 +219,40 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> stack</h3>
 					<div class="tsd-signature tsd-kind-icon">stack<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Error.stack</p>
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#stack">stack</a></p>
 						<ul>
 							<li>Defined in node_modules/typescript/lib/lib.es5.d.ts:975</li>
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="stderr" class="tsd-anchor"></a>
+					<h3>stderr</h3>
+					<div class="tsd-signature tsd-kind-icon">stderr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#stderr">stderr</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-promise/blob/f6b7f53/src/index.ts#L65">src/index.ts:65</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="stdout" class="tsd-anchor"></a>
+					<h3>stdout</h3>
+					<div class="tsd-signature tsd-kind-icon">stdout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#stdout">stdout</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-promise/blob/f6b7f53/src/index.ts#L64">src/index.ts:64</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-					<a name="preparestacktrace" class="tsd-anchor"></a>
+					<a name="prepareStackTrace" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagOptional">Optional</span> prepare<wbr>Stack<wbr>Trace</h3>
 					<div class="tsd-signature tsd-kind-icon">prepare<wbr>Stack<wbr>Trace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span>, stackTraces<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CallSite</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Error.prepareStackTrace</p>
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#prepareStackTrace">prepareStackTrace</a></p>
 						<ul>
 							<li>Defined in node_modules/@types/node/globals.d.ts:11</li>
 						</ul>
@@ -237,11 +288,11 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-					<a name="stacktracelimit" class="tsd-anchor"></a>
+					<a name="stackTraceLimit" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> stack<wbr>Trace<wbr>Limit</h3>
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Trace<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Error.stackTraceLimit</p>
+						<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#stackTraceLimit">stackTraceLimit</a></p>
 						<ul>
 							<li>Defined in node_modules/@types/node/globals.d.ts:13</li>
 						</ul>
@@ -251,7 +302,7 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-external">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-					<a name="capturestacktrace" class="tsd-anchor"></a>
+					<a name="captureStackTrace" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> capture<wbr>Stack<wbr>Trace</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">capture<wbr>Stack<wbr>Trace<span class="tsd-signature-symbol">(</span>targetObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, constructorOpt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
@@ -259,7 +310,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Error.captureStackTrace</p>
+								<p>Inherited from <a href="ExitError.html">ExitError</a>.<a href="ExitError.html#captureStackTrace">captureStackTrace</a></p>
 								<ul>
 									<li>Defined in node_modules/@types/node/globals.d.ts:4</li>
 								</ul>
@@ -294,56 +345,68 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="CrossSpawnError.html" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Error</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="crossspawnerror.html" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Error</a>
+						<a href="ExitCodeError.html" class="tsd-kind-icon">Exit<wbr>Code<wbr>Error</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="crossspawnerror.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="ExitCodeError.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="crossspawnerror.html#message" class="tsd-kind-icon">message</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="ExitCodeError.html#args" class="tsd-kind-icon">args</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="crossspawnerror.html#name" class="tsd-kind-icon">name</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="ExitCodeError.html#cmd" class="tsd-kind-icon">cmd</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="crossspawnerror.html#originalerror" class="tsd-kind-icon">original<wbr>Error</a>
+								<a href="ExitCodeError.html#code" class="tsd-kind-icon">code</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="crossspawnerror.html#stack" class="tsd-kind-icon">stack</a>
+								<a href="ExitCodeError.html#message" class="tsd-kind-icon">message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+								<a href="ExitCodeError.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+								<a href="ExitCodeError.html#stack" class="tsd-kind-icon">stack</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="ExitCodeError.html#stderr" class="tsd-kind-icon">stderr</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="ExitCodeError.html#stdout" class="tsd-kind-icon">stdout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-								<a href="crossspawnerror.html#preparestacktrace" class="tsd-kind-icon">prepare<wbr>Stack<wbr>Trace</a>
+								<a href="ExitCodeError.html#prepareStackTrace" class="tsd-kind-icon">prepare<wbr>Stack<wbr>Trace</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-								<a href="crossspawnerror.html#stacktracelimit" class="tsd-kind-icon">stack<wbr>Trace<wbr>Limit</a>
+								<a href="ExitCodeError.html#stackTraceLimit" class="tsd-kind-icon">stack<wbr>Trace<wbr>Limit</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-								<a href="crossspawnerror.html#capturestacktrace" class="tsd-kind-icon">capture<wbr>Stack<wbr>Trace</a>
+								<a href="ExitCodeError.html#captureStackTrace" class="tsd-kind-icon">capture<wbr>Stack<wbr>Trace</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-class">
-						<a href="exitcodeerror.html" class="tsd-kind-icon">Exit<wbr>Code<wbr>Error</a>
+						<a href="ExitError.html" class="tsd-kind-icon">Exit<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="exiterror.html" class="tsd-kind-icon">Exit<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="exitsignalerror.html" class="tsd-kind-icon">Exit<wbr>Signal<wbr>Error</a>
+						<a href="ExitSignalError.html" class="tsd-kind-icon">Exit<wbr>Signal<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#crossspawnargs" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Args</a>
+						<a href="../modules.html#CrossSpawnArgs" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#crossspawnoptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Options</a>
+						<a href="../modules.html#CrossSpawnOptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#loggerfunction" class="tsd-kind-icon">Logger<wbr>Function</a>
+						<a href="../modules.html#LoggerFunction" class="tsd-kind-icon">Logger<wbr>Function</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../modules.html#spawn" class="tsd-kind-icon">spawn</a>
