@@ -1,5 +1,6 @@
 import { CrossSpawnError, ExitSignalError, spawn } from "../src";
 import path from "path";
+// eslint-disable-next-line import/no-unresolved
 import test from "ava";
 
 test("returns stdout", async (t) => {
