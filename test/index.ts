@@ -9,6 +9,15 @@ test("returns stdout", async (t) => {
   t.regex(output, /index\.ts/);
 });
 
+// Originally from https://github.com/electron/windows-installer/pull/409#issuecomment-1071317903
+test("does not split UTF-8 characters across chunks", async (t) => {
+  const output = await spawn("node", [
+    "-e",
+    "process.stdout.write(Buffer.from([0xe5, 0xa5])); setTimeout(() => process.stdout.write(Buffer.from([0xbd])), 100)",
+  ]);
+  t.is(output, "好");
+});
+
 test("returns empty string if stdio is ignored", async (t) => {
   const dir = process.platform === "darwin" ? "ls" : "dir";
   const output = await spawn(dir, [__dirname], { stdio: "ignore" });

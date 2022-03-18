@@ -151,12 +151,12 @@ export async function spawn(
     let stderr = "";
     const process = crossSpawn(cmd, args, spawnOptions);
     if (process.stdout) {
-      process.stdout.on("data", (data) => {
+      process.stdout.setEncoding("utf8").on("data", (data) => {
         stdout += data.toString();
       });
     }
     if (process.stderr) {
-      process.stderr.on(
+      process.stderr.setEncoding("utf8").on(
         "data",
         /* istanbul ignore next */ (data) => {
           stderr += data.toString();
