@@ -26,15 +26,15 @@
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@malept/eslint-config": "^2.1.0",
     "@types/cross-spawn": "^6.0.1",
     "@types/node": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.0.1",
-    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
     "ava": "^3.3.0",
-    "eslint": "^7.0.0",
-    "eslint-config-prettier": "^8.0.0",
+    "eslint": "^8.11.0",
     "eslint-plugin-ava": "^13.0.0",
     "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-tsdoc": "^0.2.5",
@@ -56,30 +56,9 @@
     ]
   },
   "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": "2019",
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "eslint-plugin-tsdoc"
-    ],
     "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:ava/recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:import/typescript",
-      "plugin:prettier/recommended",
-      "plugin:promise/recommended",
-      "prettier"
-    ],
-    "rules": {
-      "strict": "error",
-      "tsdoc/syntax": "warn"
-    }
+      "@malept/eslint-config/typescript"
+    ]
   },
   "eslintIgnore": [
     "dist"
