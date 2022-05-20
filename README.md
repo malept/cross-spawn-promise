@@ -14,10 +14,21 @@ command, code, `stdout`, and `stderr` as properties.
 If the spawned process is terminated by a signal on non-Windows platforms, an `ExitSignalError` is
 thrown with the original command, signal name, `stdout`, and `stderr` as properties.
 
+The promise will otherwise resolve with the data that went to `stdout`. `stderr` may be used
+instead if given the option `returnStderr`. Further output customization can be done by providing a
+`formatOutputCallback`. This can be used to hide secrets, return both output and error, or perform
+any other post-processing need.
+
 ## Extra Options
 
+- `formatOutputCallback`: a callback to format the data that went to stdout and stderr. The
+  promise resolves to the output of this function. Defaults to just the data that went to stdout.
 - `logger`: a `Function` such as `console.log` or `debug(name)` to log some information
   about the spawned process.
+- `stringifyCommandCallback`: a callback to format the command before it is logged. Can be
+  used to suppress secrets, or simply render the command in the preferred style. Also applies
+  during Error handling, where the command-line string is rendered for inclusion in the
+  Error objects.
 - `updateErrorCallback`: a callback which mutates the error before it is re-thrown. Most commonly,
   this is used to augment the error message of `ENOENT` error to provide a more human-friendly
   message as to how to install the missing executable.
