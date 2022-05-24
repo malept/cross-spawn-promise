@@ -15,6 +15,7 @@
     "coverage": "nyc --reporter=lcov --reporter=text ava",
     "docs": "typedoc src/index.ts",
     "lint": "prettier --check . && eslint --ext .ts .",
+    "fix": "prettier --write . && eslint --fix --ext .ts .",
     "prepare": "husky install && yarn build",
     "test": "yarn lint && yarn ava"
   },

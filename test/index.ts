@@ -77,3 +77,41 @@ test("updateErrorCallback removes the message from the error", async (t) => {
     { message: /^Error executing command \(does-not-exist\):\nError/ }
   );
 });
+
+test("can return the stderr", async (t) => {
+  const testStr = "I went there";
+  const output = await spawn("node", ["-e", `console.error("${testStr}")`], {
+    returnStderr: true,
+  });
+  t.is(output.trim(), testStr);
+});
+
+test("respects the formatOutputCallback", async (t) => {
+  const testStr = "authToken=Tm9zeSBsaXR0bGUgZGV2LCBhcmVuJ3QgeW91PyE=";
+  const output = await spawn("node", ["-e", `console.log("${testStr}")`], {
+    returnStderr: true,
+    formatOutputCallback: redact,
+  });
+  t.is(output.trim(), "authToken=REDACTED");
+});
+
+test("custom log formatter does not break anything", async (t) => {
+  const testStr = "authToken=SSBzYXcgdGhhdA==";
+  const output = await spawn("node", ["-e", `console.log("${testStr}")`], {
+    returnStderr: true,
+    logger: console.log,
+    stringifyCommandCallback: (cmd: string, args?: ReadonlyArray<string>) => {
+      let logThese: string[] = [];
+      if (args && Array.isArray(args)) {
+        logThese = args.map((arg) => redact(arg));
+      }
+      return JSON.stringify([cmd, ...logThese], null, 2);
+    },
+    formatOutputCallback: redact,
+  });
+  t.is(output.trim(), "authToken=REDACTED");
+});
+
+function redact(input: string): string {
+  return input?.replace(/authToken=[^\s]*/, "authToken=REDACTED");
+}
